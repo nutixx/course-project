@@ -10,7 +10,7 @@ import './App.css'
 function App() {
 
   return (
-    <Router basename="/course-project">
+    <Router basename={import.meta.env.VITE_BASE_URL}>
       <Header />
       <main>
         <Routes>
