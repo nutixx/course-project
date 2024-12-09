@@ -1,0 +1,207 @@
+/* Основні стилі для хедера */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 95px;
+  padding: 0 34px;
+  background-color: #1c1c1c;
+  color: #fff;
+  border: 2px solid #262626;
+  border-radius: 100px;
+  position: relative;
+  gap: 20px;
+}
+
+/* Лого */
+.logo {
+  font-size: 20px;
+  flex: 1;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  color: white;
+  width: 25px;
+  height: 25px;
+}
+
+.logo-icon {
+  height: 25px;
+  width: 25px;
+  color: #d4ff00;
+  margin-right: 8px;
+  background-image: url(../../assets/bank-icon.svg);
+}
+
+/* Меню навігації */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 5px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  padding: 0.66rem 1.33rem;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 82px;
+  transition: 0.5s;
+}
+
+.nav ul li .active {
+  background-color: #262626;
+  padding: 0.66rem 1.33rem;
+}
+
+.nav ul li a:hover {
+  background-color: #3a3a3a;
+  color: #d4ff00;
+}
+
+.login {
+  height: 100%;
+  flex: 1;
+}
+
+/* Сховати меню для мобільних */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  display: block;
+  height: 3px;
+  background-color: #d4ff00;
+  border-radius: 3px;
+}
+
+button.burger-menu {
+  display: hidden;
+  width: 56px;
+  height: 40px;
+  background-color: var(--lime);
+  background-image: url(../../assets/icons/Burger-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 82px;
+}
+
+button.burger-menu.active {
+  background-color: #262626;
+  transition: 0.3s ease;
+}
+
+button.burger-menu:hover {
+  background-color: var(--lime-hover);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    z-index: 3;
+    border-radius: 100px;
+    transition: border-radius 0.3s ease; /* Анімація для всіх кутів */
+    margin-bottom: 50px;
+  }
+
+  .button.burger-menu {
+    display: block;
+  }
+
+  .header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c; /* Колір псевдоелемента */
+    border-radius: 100px;
+    transition: border-radius 0.3s ease;
+    z-index: -1; /* Щоб псевдоелемент не перекривав контент */
+  }
+
+  .header::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+    background-color: #1c1c1c;
+    z-index: -1;
+  }
+
+  .header.bottom-radius-adaptive::after {
+    border-bottom-right-radius: 0%;
+  }
+
+  .bottom-radius-adaptive {
+    border-bottom-right-radius: 0%;
+  }
+
+  .nav {
+    position: absolute;
+    z-index: -2;
+    top: calc(100% - 47.5px);
+    right: 0px;
+    background-color: #1c1c1c;
+    border-top: none;
+    flex-direction: column;
+    width: 200px;
+    max-height: 0; /* Початковий стан: сховане меню */
+    overflow: hidden;
+    padding: 0 20px;
+    gap: 10px;
+    border-radius: 0 0 30px 30px;
+    border: 0;
+    display: flex;
+    transition: 0.3s ease; /* Анімація висування */
+  }
+
+  .logo {
+    z-index: 2;
+  }
+
+  .nav.open {
+    z-index: 1;
+    right: -2px;
+    top: 100%;
+    max-height: 300px; /* Висота меню в розгорнутому стані */
+    padding: 20px;
+    border: 2px solid #262626;
+    border-top: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}

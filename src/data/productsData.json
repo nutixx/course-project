@@ -1,0 +1,43 @@
+{
+    "tabs": [
+      { "id": "individuals", "label": "For Individuals" },
+      { "id": "businesses", "label": "For Businesses" }
+    ],
+    "content": {
+      "individuals": [
+        {
+          "icon": "💼",
+          "title": "Checking Accounts",
+          "description": "Enjoy easy and convenient access to your funds with our range of checking account options. Benefit from features such as online and mobile banking, debit cards, and free ATM access."
+        },
+        {
+          "icon": "💰",
+          "title": "Savings Accounts",
+          "description": "Build your savings with our competitive interest rates and flexible savings account options. Whether you're saving for a specific goal or want to grow your wealth over time, we have the right account for you."
+        },
+        {
+          "icon": "🏠",
+          "title": "Loans and Mortgages",
+          "description": "Realize your dreams with our flexible loan and mortgage options. From personal loans to home mortgages, our experienced loan officers are here to guide you through the application process and help you secure the funds you need."
+        }
+      ],
+      "businesses": [
+        {
+          "icon": "📊",
+          "title": "Business Accounts",
+          "description": "Simplify your business finances with our specialized accounts designed for small and large businesses alike."
+        },
+        {
+          "icon": "📈",
+          "title": "Business Loans",
+          "description": "Expand your business with flexible financing options. Whether you need working capital or funds for a major investment, we’re here to help."
+        },
+        {
+          "icon": "💳",
+          "title": "Corporate Credit Cards",
+          "description": "Manage your expenses effectively with our corporate credit cards. Enjoy exclusive benefits and rewards tailored for businesses."
+        }
+      ]
+    }
+  }
+  

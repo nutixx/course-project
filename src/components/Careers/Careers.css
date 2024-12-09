@@ -1,0 +1,121 @@
+.values-section {
+  display: grid;
+  grid-template-columns: 1fr; /* Одноколонковий дизайн для мобільних */
+  gap: 2rem;
+
+  .value-item {
+    border-left: 3px solid var(--lime); /* Лінія зліва */
+    padding-left: 2rem;
+  }
+
+  .value-title {
+    font-size: 2.25rem;
+    margin: 0 0 1.5rem;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #4C4C4D;
+    font-weight: 500;
+  }
+
+  .value-description {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .values-section {
+    grid-template-columns: 1fr 1fr; /* Дві колонки на великих екранах */
+  }
+}
+
+.job-cards-section {
+    display: grid;
+    grid-template-columns: 1fr; /* Одноколонковий дизайн для мобільних */
+    gap: 2rem;
+  
+  
+  .job-card {
+    text-align: left;
+    background-color: #1b1b1b; /* Темний фон */
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #ffffff; /* Білий текст */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .job-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .job-meta {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: #a0a0a0;
+  }
+  
+  .job-description h4,
+  .job-requirements h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .job-description p {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .job-requirements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .job-requirements li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .job-requirements li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a0ff00; /* Зелений маркер */
+    font-size: 1.2rem;
+  }
+  
+  .apply-button {
+    background-color: #a0ff00; /* Яскраво-зелена кнопка */
+    color: #1b1b1b;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-button:hover {
+    background-color: #89e600; /* Трохи темніший відтінок зеленого */
+  }
+  
+  @media (min-width: 768px) {
+    .job-cards-section {
+      grid-template-columns: 1fr 1fr; /* Дві колонки на великих екранах */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .job-cards-section {
+      grid-template-columns: repeat(3, 1fr); /* Три колонки на дуже великих екранах */
+    }
+  }
+}
