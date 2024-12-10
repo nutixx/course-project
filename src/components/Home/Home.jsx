@@ -5,6 +5,7 @@ import UseCases from "./components/UseCases/UseCases";
 import FeaturesTabs from "./components/Features/FeaturesTabs";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
+import JoinUsModal from "../Modal/JoinUsModal";
 
 export default function Home() {
   const individualData = {
@@ -59,9 +60,7 @@ export default function Home() {
             financial goals. We are committed to delivering personalized and
             innovative services that prioritize our customers&apos; needs.
           </p>
-          <a href="#" className="button">
-            Open Account
-          </a>
+          <JoinUsModal/>
         </div>
         <div className="hero-image"></div>
       </section>
@@ -93,13 +92,21 @@ export default function Home() {
         online banking, secure transactions, and personalized financial
         insights, all designed to enhance your banking experience.
       </p>
-      <FeaturesTabs/>
+      <FeaturesTabs />
       <FAQ />
-      <Testimonials/>
+      <Testimonials />
       <section className="CTA">
-        <h2>Почни свою фінансову подорож з <span className="highlight">YourBank сьогодні!</span></h2>
-        <p>Відкрий рахунок уже сьогодні та отримай доступ до сучасних банківських рішень, які спрощують управління фінансами. Надійність, зручність і підтримка — усе це чекає на тебе з YourBank. Не відкладай, зроби перший крок до фінансової свободи!</p>
-        <a href=""  className="button">Створити рахунок</a>
+        <h2>
+          Почни свою фінансову подорож з{" "}
+          <span className="highlight">YourBank сьогодні!</span>
+        </h2>
+        <p>
+          Відкрий рахунок уже сьогодні та отримай доступ до сучасних банківських
+          рішень, які спрощують управління фінансами. Надійність, зручність і
+          підтримка — усе це чекає на тебе з YourBank. Не відкладай, зроби
+          перший крок до фінансової свободи!
+        </p>
+        <JoinUsModal/>
       </section>
     </>
   );

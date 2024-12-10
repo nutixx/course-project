@@ -319,9 +319,10 @@ section {
 
   .tabs {
     border: none;
+    width: auto;
     overflow: auto;
     margin-inline: auto;
-    justify-content: center;
+    justify-content: normal;
     border-radius: 10px;
     gap: 1rem;
     margin-bottom: 2rem;

@@ -81,6 +81,8 @@ p.section-p {
 } */
 
 .button {
+  border: none;
+  cursor: pointer;
   padding: 14px 24px;
   border-radius: 82px;
   background: var(--lime);
