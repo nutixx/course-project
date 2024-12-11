@@ -10,6 +10,7 @@ section {
   background-image: url(../../assets/images/Objects.png);
   aspect-ratio: 3/1;
   height: 20dvh;
+  overflow: hidden;
   z-index: -1;
   background-size: cover;
 }
