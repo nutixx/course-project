@@ -9,36 +9,36 @@ import JoinUsModal from "../Modal/JoinUsModal";
 
 export default function Home() {
   const individualData = {
-    title: "For Individuals",
+    title: "Для фізичних осіб",
     description:
-      "For individuals, our mortgage services pave the way to homeownership, and our flexible personal loans provide vital support during various life milestones. We also prioritize retirement planning, ensuring a financially secure future for our customers.",
+      "Для приватних осіб наші іпотечні послуги прокладають шлях до власного житла, а гнучкі персональні кредити надають життєво важливу підтримку на різних життєвих етапах. Ми також надаємо пріоритет пенсійному плануванню, забезпечуючи фінансово безпечне майбутнє для наших клієнтів.",
     features: [
-      { icon: "🪙", title: "Managing Personal Finances" },
-      { icon: "🌱", title: "Saving for the Future" },
-      { icon: "🏠", title: "Homeownership" },
-      { icon: "📚", title: "Education Funding" },
+      { icon: "🪙", title: "Управління особистими фінансами" },
+      { icon: "🌱", title: "Заощадження на майбутнє" },
+      { icon: "🏠", title: "Власність житла" },
+      { icon: "📚", title: "Фінансування освіти" },
     ],
     statistics: [
-      { percentage: "78%", description: "Secure Retirement Planning" },
-      { percentage: "63%", description: "Manageable Debt Consolidation" },
-      { percentage: "91%", description: "Reducing financial burdens" },
+      { percentage: "78%", description: "Безпечне планування виходу на пенсію" },
+      { percentage: "63%", description: "Керована консолідація боргу" },
+      { percentage: "91%", description: "Зменшення фінансового навантаження" },
     ],
   };
 
   const businessData = {
-    title: "For Business",
+    title: "Для бізнесу",
     description:
-      " For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them",
+      "Для бізнесу ми сприяємо зростанню завдяки рішенням з управління оборотним капіталом, які оптимізують грошові потоки, а наші індивідуальні варіанти фінансування сприяють розширенню бізнесу. Якими б не були ваші фінансові прагнення, YourBank прагне надати правильні інструменти та підтримку для їх досягнення.",
     features: [
-      { icon: "📊", title: "Startups and Enterpreneurs" },
-      { icon: "💳", title: "Cash Flow Management" },
-      { icon: "🏢", title: "Business Expansion" },
-      { icon: "📈", title: "Payment Solutions" },
+      { icon: "📊", title: "Стартапи та підприємці" },
+      { icon: "💳", title: "Управління грошовими потоками" },
+      { icon: "🏢", title: "Розширення бізнесу" },
+      { icon: "📈", title: "Платіжні рішення" },
     ],
     statistics: [
-      { percentage: "65%", description: "Cash Flow Management" },
-      { percentage: "70%", description: "Drive Business Expansion" },
-      { percentage: "45%", description: "Streamline payroll processing" },
+      { percentage: "65%", description: "Управління грошовими потоками" },
+      { percentage: "70%", description: "Стимулюйте розширення бізнесу" },
+      { percentage: "45%", description: "Оптимізуйте обробку заробітної плати" },
     ],
   };
 
@@ -49,16 +49,16 @@ export default function Home() {
         <div className="hero-content">
           <div className="LLC">
             <img src={check_badge} alt="check-badge" />
-            <p>No LLC Required, No Credit Check.</p>
+            <p>Без ТОВ та перевірки кредитів.</p>
           </div>
           <h1>
-            Welcome to YourBank Empowering Your <span className="highlight">Financial Journey</span>
+          Ласкаво просимо до YourBank, що розширює можливості вашої <span className="highlight">Фінансової Подорожі</span>
           </h1>
           <p>
-            At YourBank, our mission is to provide comprehensive banking
-            solutions that empower individuals and businesses to achieve their
-            financial goals. We are committed to delivering personalized and
-            innovative services that prioritize our customers&apos; needs.
+            Наша місія в YourBank - надавати комплексні банківські
+            рішення, які дають можливість приватним особам та бізнесу досягати своїх
+            фінансових цілей. Ми прагнемо надавати персоналізовані та
+            інноваційні послуги, що відповідають потребам наших клієнтів.
           </p>
           <JoinUsModal/>
         </div>
@@ -66,11 +66,11 @@ export default function Home() {
       </section>
       <Products />
       <h2>
-        <span className="highlight">Use Cases</span>
+      Варіанти <span className="highlight"> Використання</span>
       </h2>
       <p className="section-p">
-        At YourBank, we cater to the diverse needs of individuals and businesses
-        alike, offering a wide range of financial solutions
+        У YourBank ми задовольняємо різноманітні потреби як фізичних, так і юридичних осіб
+        та бізнесу, пропонуючи широкий спектр фінансових рішень
       </p>
       <UseCases
         title={individualData.title}
@@ -85,12 +85,12 @@ export default function Home() {
         statistics={businessData.statistics}
       />
       <h2 className="section-title">
-        Our <span className="highlight">Features</span>
+        Наші <span className="highlight">Можливості</span>
       </h2>
       <p className="section-p">
-        Experience a host of powerful features at YourBank, including seamless
-        online banking, secure transactions, and personalized financial
-        insights, all designed to enhance your banking experience.
+        Скористайтеся безліччю потужних функцій у YourBank, включаючи безперебійний
+        онлайн-банкінг, безпечні транзакції та персоналізовану фінансову
+        та персоналізовану фінансову інформацію - все для того, щоб покращити ваш банківський досвід.
       </p>
       <FeaturesTabs />
       <FAQ />

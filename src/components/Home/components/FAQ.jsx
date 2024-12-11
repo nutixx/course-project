@@ -18,10 +18,10 @@ export default function FAQ() {
   return (
     <section className="faq-section">
       <h2 className="faq-title">
-        <span className="highlight">Frequently</span> Asked Questions
+        <span className="highlight">Поширені</span> Запитання
       </h2>
       <p className="faq-description section-p">
-        Still have any questions? Contact our Team via support@yourbank.com
+        Залишилися питання? Зв&apos;яжіться з нашою командою через support@yourbank.com
       </p>
       <div className="faq-list">
         {faqs.slice(0, visibleCount).map((faq, index) => (
@@ -35,7 +35,7 @@ export default function FAQ() {
       </div>
       {isLoadMoreVisible && (
         <button className="load-more-button" onClick={loadMore}>
-          Load All FAQs
+          Завантажити ще
         </button>
       )}
     </section>

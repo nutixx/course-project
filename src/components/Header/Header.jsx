@@ -2,9 +2,11 @@ import "./Header.css";
 import { useState, useRef, useEffect } from "react";
 import HeaderButton from "./HeaderButton";
 
+let lastSelected;
+
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [selectedPage, setSelectedPage] = useState('Home');
+  const [selectedPage, setSelectedPage] = useState('');
 
   const navRef = useRef(null);
   const burgerRef = useRef(null);
@@ -14,7 +16,9 @@ export default function Header() {
   };
 
   function handleClick(event) {
-    setSelectedPage(event.target.innerText);
+    lastSelected = event.target.innerText
+    setSelectedPage(lastSelected);
+    console.log(lastSelected)
   }
 
   const handleClickOutside = (event) => {
@@ -27,6 +31,7 @@ export default function Header() {
       !burgerRef.current.contains(event.target)
     ) {
       setMenuOpen(false);
+      console.log(lastSelected)
     }
   };
 
@@ -48,13 +53,13 @@ export default function Header() {
         ref={navRef}
       >
         <ul>
-          <HeaderButton url="/" isSelected={selectedPage === 'Home'} onClick={handleClick}>Home
+          <HeaderButton url="/" isSelected={lastSelected === 'Home'} onClick={handleClick}>Домівка
           </HeaderButton>
-          <HeaderButton url="/careers" isSelected={selectedPage === 'Careers'} onClick={handleClick}>Careers
+          <HeaderButton url="/careers" isSelected={lastSelected === 'Careers'} onClick={handleClick}>Кар&apos;єра
           </HeaderButton>
-          <HeaderButton url="/about" isSelected={selectedPage === 'About'} onClick={handleClick}>About
+          <HeaderButton url="/about" isSelected={lastSelected === 'About'} onClick={handleClick}>Про нас
           </HeaderButton>
-          <HeaderButton url="/security" isSelected={selectedPage === 'Security'} onClick={handleClick}>Security
+          <HeaderButton url="/security" isSelected={lastSelected === 'Security'} onClick={handleClick}>Безпека
           </HeaderButton>
         </ul>
       </nav>

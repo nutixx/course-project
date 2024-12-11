@@ -31,21 +31,17 @@ export default function Testimonials() {
       <div className="testimonials-header">
         <div className="testimonials-text">
           <h2 className="testimonials-title">
-            Our <span className="highlight">Testimonials</span>
+            Наші <span className="highlight">Відгуки</span>
           </h2>
           <p className="switch-wrapper__description">
-            Discover how YourBank has transformed lives with innovative digital
-            solutions and personalized customer service. See why our clients trust
-            us for a secure and prosperous financial journey.
+            Дізнайтеся, як YourBank змінив життя завдяки інноваційним цифровим
+            рішеннями та персоналізованим обслуговуванням клієнтів. Дізнайтеся,
+            чому наші клієнти довіряють нам нам для безпечної та процвітаючої
+            фінансової подорожі.
           </p>
         </div>
-        <Tabs
-          tabs={tabs}
-          activeTab={activeTab}
-          onTabChange={handleTabChange}
-        />
+        <Tabs tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
       </div>
-      
 
       <Swiper
         ref={swiperRef}

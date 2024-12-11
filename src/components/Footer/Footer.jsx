@@ -14,10 +14,10 @@ export default function Footer() {
           <span className="logo-icon"></span> YourBanK
         </div>
         <nav className="footer-nav">
-          <a href="/">Home</a>
-          <a href="/careers">Careers</a>
-          <a href="/about">About</a>
-          <a href="/security">Security</a>
+          <a href="/">Домівка</a>
+          <a href="/careers">Кар&apos;єра</a>
+          <a href="/about">Про нас</a>
+          <a href="/security">Безпека</a>
         </nav>
       </div>
       <ul className="footer-contact">

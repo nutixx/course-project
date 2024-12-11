@@ -54,6 +54,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  text-transform: capitalize;
   margin-bottom: 1rem;
 }
 

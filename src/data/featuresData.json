@@ -1,54 +1,54 @@
 {
     "tabs": [
-      { "id": "online-banking", "label": "Online Banking" },
-      { "id": "financial-tools", "label": "Financial Tools" },
-      { "id": "customer-support", "label": "Customer Support" }
+      { "id": "online-banking", "label": "Інтернет-банкінг" },
+      { "id": "financial-tools", "label": "Фінансові Інструменти" },
+      { "id": "customer-support", "label": "Клієнтська Підтримка" }
     ],
     "content": {
       "online-banking": [
         {
-          "title": "24/7 Account Access",
-          "description": "Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease."
+          "title": "Доступ до рахунку 24/7",
+          "description": "Насолоджуйтесь зручністю доступу до своїх рахунків у будь-який час і з будь-якого місця за допомогою нашої захищеної платформи онлайн-банкінгу. Перевіряйте залишки, переказуйте кошти та сплачуйте рахунки з легкістю."
         },
         {
-          "title": "Mobile Banking App",
-          "description": "Stay connected to your finances on the go with our user-friendly mobile banking app. Easily manage your accounts, deposit checks, and make payments from your smartphone or tablet."
+          "title": "Мобільний додаток",
+          "description": "Залишайтеся на зв'язку з вашими фінансами в дорозі за допомогою нашого зручного мобільного банкінгу. Легко керуйте своїми рахунками, депонуйте чеки та здійснюйте платежі зі смартфона або планшета."
         },
         {
-          "title": "Secure Transactions",
-          "description": "Rest assured knowing that your transactions are protected by industry-leading security measures. We employ encryption and multi-factor authentication to safeguard your financial information."
+          "title": "Безпечні транзакції",
+          "description": "Будьте впевнені, знаючи, що ваші транзакції захищені найкращими в галузі заходами безпеки. Ми використовуємо шифрування та багатофакторну автентифікацію для захисту вашої фінансової інформації."
         },
         {
-          "title": "Bill Pay and Transfers",
-          "description": "Save time and avoid late fees with our convenient bill pay service. Set up recurring payments or make one-time transfers between your accounts with just a few clicks."
+          "title": "Оплата рахунків та перекази",
+          "description": "Заощаджуйте час та уникайте штрафів за прострочення з нашим зручним сервісом оплати рахунків. Налаштуйте регулярні платежі або здійснюйте одноразові перекази між своїми рахунками всього за кілька кліків."
         }
       ],
       "financial-tools": [
         {
-          "title": "Budget Management",
-          "description": "Track your spending and set up budgets with our easy-to-use financial tools. Gain insights into your finances and make smarter financial decisions."
+          "title": "Управління бюджетом",
+          "description": "Відстежуйте свої витрати та складайте бюджети за допомогою наших простих у використанні фінансових інструментів. Отримуйте інформацію про свої фінанси та приймайте розумні фінансові рішення."
         },
         {
-          "title": "Investment Insights",
-          "description": "Get personalized investment advice to grow your wealth over time. Access market trends and analysis tailored to your financial goals."
+          "title": "Інвестиційні ідеї",
+          "description": "Отримуйте індивідуальні інвестиційні поради, щоб примножити свої статки з часом. Отримуйте доступ до ринкових тенденцій та аналізу, адаптованого до ваших фінансових цілей."
         },
         {
-          "title": "Tax Calculators",
-          "description": "Simplify your tax planning with our tax calculator tools. Estimate returns and maximize your savings with expert recommendations."
+          "title": "Податкові калькулятори",
+          "description": "Спростіть своє податкове планування за допомогою нашого податкового калькулятора. Оцініть прибуток і максимізуйте свої заощадження за допомогою рекомендацій експертів."
         }
       ],
       "customer-support": [
         {
-          "title": "24/7 Live Support",
-          "description": "Our team is available around the clock to assist you with any questions or concerns. Get real-time help from our experienced customer service representatives."
+          "title": "24/7 Підтримка в режимі реального часу",
+          "description": "Наша команда доступна цілодобово, щоб допомогти вам з будь-якими питаннями або проблемами. Отримайте допомогу в режимі реального часу від наших досвідчених представників служби підтримки."
         },
         {
-          "title": "Fraud Protection",
-          "description": "Protect your accounts with our fraud prevention tools and dedicated support team. Stay informed and secure with proactive monitoring and alerts."
+          "title": "Захист від шахрайства",
+          "description": "Захистіть свої акаунти за допомогою наших інструментів для запобігання шахрайству та спеціальної команди підтримки. Залишайтеся в курсі подій і будьте в безпеці завдяки проактивному моніторингу та сповіщенням."
         },
         {
-          "title": "Feedback and Resolution",
-          "description": "Share your feedback and get quick resolutions to your issues. We value your input and strive to provide the best customer experience possible."
+          "title": "Зворотній зв'язок та вирішення",
+          "description": "Поділіться своїми відгуками та отримайте швидке вирішення ваших проблем. Ми цінуємо ваш внесок і прагнемо забезпечити найкращий клієнтський досвід."
         }
       ]
     }
