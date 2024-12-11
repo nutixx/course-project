@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 import facebook from "../../assets/icons/facebook.svg";
 import twitter from "../../assets/icons/twitter.svg";
 import linkedin from "../../assets/icons/linkedin.svg";
@@ -14,10 +15,10 @@ export default function Footer() {
           <span className="logo-icon"></span> YourBanK
         </div>
         <nav className="footer-nav">
-          <a href="/">Домівка</a>
-          <a href="/careers">Кар&apos;єра</a>
-          <a href="/about">Про нас</a>
-          <a href="/security">Безпека</a>
+          <Link to='/'>Домівка</Link>
+          <Link to="/careers">Кар&apos;єра</Link>
+          <Link to="/about">Про нас</Link>
+          <Link to="/security">Безпека</Link>
         </nav>
       </div>
       <ul className="footer-contact">
