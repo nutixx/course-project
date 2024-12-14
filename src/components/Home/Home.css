@@ -468,22 +468,22 @@ section {
 /* Зміна кольору стрілок */
 .swiper .swiper-button-next,
 .swiper .swiper-button-prev {
-  color: var(--lime); /* Зелений колір, важливо додати !important */
+  color: var(--lime);
 }
 
 /* Зміна розміру стрілок */
 .swiper .swiper-button-next::after,
 .swiper .swiper-button-prev::after {
-  font-size: 1.5rem; /* Налаштуйте розмір під ваш дизайн */
+  font-size: 1.5rem;
 }
 
 /* Зміна кольору пагінації (точок) */
 .swiper .swiper-pagination-bullet {
-  background-color: #ffffff; /* Білий колір для всіх точок */
+  background-color: #ffffff;
 }
 
 .swiper .swiper-pagination-bullet-active {
-  background-color: var(--lime); /* Зелений колір для активної точки */
+  background-color: var(--lime);
 }
 
 .faq-section {
@@ -561,7 +561,10 @@ section {
 .CTA {
   position: relative;
   padding: 2rem;
-  background-repeat: no-repeat;
+  /* background-image: url(../../assets/images/Abstract_Design_2.svg); */
+  /* background-size: 30px 30px; */
+  /* background-position: 0 0; */
+  /* background-repeat: no-repeat; */
   text-align: center;
   background-size: cover;
   border-radius: 20px;
@@ -580,12 +583,17 @@ section {
   }
 }
 
+.CTA > * {
+  position: relative;
+  z-index: 5;
+}
+
 .CTA::after {
   top: 0;
   left: 0;
   content: "";
   position: absolute;
-  z-index: 7;
+  z-index: 4;
   width: 10rem;
   height: 10rem;
   background-image: url(../../assets/images/Abstract_Design_2.svg);
