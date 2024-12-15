@@ -1,0 +1,90 @@
+.mission-vision-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  .mission-vision-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #fff;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .image-wrapper {
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 10/9;
+    border-radius: 50px 50px 10px 10px;
+    padding: 1.75rem 1.75rem 0 1.75rem;
+    background-color: #1c1c1c;
+    background-image: url(../../assets/images/Abstract_Design_2.svg);
+    background-size: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    @media (min-width: 768px) {
+      min-height: 320px;
+      flex: 40%;
+    }
+  }
+
+  .content {
+    @media (min-width: 768px) {
+        flex: 60%;
+    }
+  }
+
+  img {
+    display: block;
+    border-radius: 50px 50px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin-bottom: 0;
+    font-size: 2rem;
+  }
+
+
+  .mission-vision-card:nth-of-type(1) .content {
+    @media (min-width: 768px) {
+      padding-left: 2rem;
+      border-left: 2px dotted var(--lime);
+    }
+  }
+
+  .mission-vision-card:nth-of-type(2) {
+    @media (min-width: 768px) {
+      flex-direction: row-reverse;
+      .content {
+        padding-right: 2rem;
+        border-right: 2px dotted var(--lime);
+      }
+    }
+  }
+}
+
+.cards-section{
+  .yourbank-card {
+    border-radius: 40px 40px 16px 16px;
+    gap: 1rem;
+
+    img{
+      border-radius: 30px 30px 12px 12px;
+    }
+
+    .description p {
+      margin: 0;
+    }
+  }
+}

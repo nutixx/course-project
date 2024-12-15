@@ -37,38 +37,7 @@
   }
 }
 
-.job-cards-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-
-  .job-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0;
-  }
-
-  .job-meta {
-    padding: 0 0.75rem;
-    width: fit-content;
-    background-color: #1a1a1a;
-    border: 1px solid #262626;
-    border-radius: 68px;
-    color: #b3b3b3;
-  }
-
-  h4 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 0;
-  }
-
-  .job-description p {
-    line-height: 1.6;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
+.cards-section {
   .job-requirements ul {
     list-style: none;
     padding: 0;
@@ -88,32 +57,6 @@
     left: 0;
     color: var(--lime); /* Зелений маркер */
     font-size: 1.2rem;
-  }
-
-  .apply-button {
-    background-color: var(--lime); /* Яскраво-зелена кнопка */
-    color: #1b1b1b;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
-  .apply-button:hover {
-    background-color: var(--lime-hover); /* Трохи темніший відтінок зеленого */
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr; /* Дві колонки на великих екранах */
-  }
-
-  @media (min-width: 1440px) {
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* Три колонки на дуже великих екранах */
   }
 }
 

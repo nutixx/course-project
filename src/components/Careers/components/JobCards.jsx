@@ -9,20 +9,22 @@ const JobCards = () => {
   }, []);
 
   return (
-    <section className="job-cards-section">
+    <section className="cards-section">
       {jobs.map((job, index) => (
         <div className="yourbank-card" key={index}>
           <div className="job-header">
-          <h3 className="job-title">{job.title}</h3>
+          <h3 className="title">{job.title}</h3>
           
-            <p className="job-meta">
-              Локація: {job.location}
-            </p>
-            <p className="job-meta">
-              Відділ: {job.department}
-            </p>
+            <div className="meta-block">
+              <p className="meta">
+                Локація: {job.location}
+              </p>
+              <p className="meta">
+                Відділ: {job.department}
+              </p>
+            </div>
           </div>
-          <div className="job-description">
+          <div className="description">
             <h4>Про цю вакансію</h4>
             <p>{job.description}</p>
           </div>
