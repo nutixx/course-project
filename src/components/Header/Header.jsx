@@ -1,28 +1,19 @@
 import "./Header.css";
 import { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import HeaderButton from "./HeaderButton";
-
-let lastSelected;
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [selectedPage, setSelectedPage] = useState('');
-
   const navRef = useRef(null);
   const burgerRef = useRef(null);
+  const location = useLocation(); // Отримуємо поточний маршрут
 
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState); // Перемикання стану
   };
 
-  function handleClick(event) {
-    lastSelected = event.target.innerText
-    setSelectedPage(lastSelected);
-    console.log(lastSelected)
-  }
-
   const handleClickOutside = (event) => {
-    // Перевірка: чи клік відбувся поза меню або бургер-кнопки
     if (
       isMenuOpen &&
       navRef.current &&
@@ -31,11 +22,9 @@ export default function Header() {
       !burgerRef.current.contains(event.target)
     ) {
       setMenuOpen(false);
-      console.log(lastSelected)
     }
   };
 
-  // Додаємо слухач кліків на документ
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
     return () => {
@@ -48,25 +37,40 @@ export default function Header() {
       <div className="logo">
         <span className="logo-icon"></span> YourBanK
       </div>
-      <nav
-        className={`nav ${isMenuOpen ? "open" : ""}`}
-        ref={navRef}
-      >
+      <nav className={`nav ${isMenuOpen ? "open" : ""}`} ref={navRef}>
         <ul>
-          <HeaderButton url="/" isSelected={lastSelected === 'Home'} onClick={handleClick}>Домівка
+          <HeaderButton
+            url="/"
+            isSelected={location.pathname === "/"}
+          >
+            Домівка
           </HeaderButton>
-          <HeaderButton url="/careers" isSelected={lastSelected === 'Careers'} onClick={handleClick}>Кар&apos;єра
+          <HeaderButton
+            url="/careers"
+            isSelected={location.pathname === "/careers"}
+          >
+            Кар&apos;єра
           </HeaderButton>
-          <HeaderButton url="/about" isSelected={lastSelected === 'About'} onClick={handleClick}>Про нас
+          <HeaderButton
+            url="/about"
+            isSelected={location.pathname === "/about"}
+          >
+            Про нас
           </HeaderButton>
-          <HeaderButton url="/security" isSelected={lastSelected === 'Security'} onClick={handleClick}>Безпека
+          <HeaderButton
+            url="/security"
+            isSelected={location.pathname === "/security"}
+          >
+            Безпека
           </HeaderButton>
         </ul>
       </nav>
-      <div className="login">
-      </div>
-      <button className={`burger-menu ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu} ref={burgerRef}>
-      </button>
+      <div className="login"></div>
+      <button
+        className={`burger-menu ${isMenuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+        ref={burgerRef}
+      ></button>
     </header>
   );
 }

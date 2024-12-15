@@ -1,7 +1,8 @@
 import WelcomeToPage from "../WelcomeToPage/WelcomeToPage";
 import welcome_careers from "../../assets/images/Careers-welcome.png";
-import ValuesSection from "./ValuesSection";
-import JobCards from "./JobCards";
+import ValuesSection from "./components/ValuesSection";
+import JobCards from "./components/JobCards";
+import InformationCard from "../InformationCard/InformationCard";
 import "./Careers.css";
 
 export default function Careers() {
@@ -9,16 +10,17 @@ export default function Careers() {
     <>
       <WelcomeToPage image={welcome_careers}>
         <h1>
-          Welcome to <span className="highlight">YourBank</span> Careers!
+          Ласкаво просимо до <span className="highlight">YourBank</span>{" "}
+          Кар&apos;єра!
         </h1>
         <p>
-          Join our team and embark on a rewarding journey in the banking
-          industry. At YourBank, we are committed to fostering a culture of
-          excellence and providing opportunities for professional growth. With a
-          focus on innovation, customer service, and integrity, we strive to
-          make a positive impact in the lives of our customers and communities.
-          Join us today and be a part of our mission to shape the future of
-          banking.
+          Приєднуйтесь до нашої команди та розпочніть захоплюючу подорож у
+          банківській індустрії. У YourBank ми прагнемо розвивати культуру
+          досконалості та надавати можливості для професійного зростання. З
+          акцентом на інновації, обслуговування клієнтів та доброчесності, ми
+          прагнемо позитивно впливати на життя наших клієнтів та суспільства.
+          Приєднуйтесь до нас сьогодні та станьте частиною нашої місії з
+          формування майбутнього банківської справи.
         </p>
       </WelcomeToPage>
       <h2>
@@ -32,6 +34,36 @@ export default function Careers() {
         досягнення наших цілей.
       </p>
       <ValuesSection />
+      <h2>
+        Наші <span className="highlight">переваги</span>
+      </h2>
+      <p className="section-p">
+        У YourBank наші цінності складають основу нашої організації та керують
+        нашими діями. Ми віримо у дотримання найвищих стандартів доброчесності,
+        надання виняткового сервісу та впровадження інновацій. Ці цінності
+        визначають нашу культуру та формують те, як ми працюємо разом для
+        досягнення наших цілей.
+      </p>
+      <section className="benefits-section">
+        <InformationCard icon="📊" title="Конкурента компенсація">
+          Ми надаємо конкурентоспроможний пакет заробітної плати, який визнає
+          навички та досвід наших працівників...
+        </InformationCard>
+        <InformationCard icon="💡" title="Здоров'я та благополуччя">
+          Ми надаємо пріоритет здоров&apos;ю та благополуччю наших працівників,
+          пропонуючи комплексні медичні, стоматологічні та зорові страхові
+          плани...
+        </InformationCard>
+        <InformationCard icon="💼" title="Планування пенсії">
+          YourBank прагне допомогти працівникам спланувати їхнє майбутнє. Ми
+          пропонуємо пенсійний план із щедрим співфінансуванням від
+          роботодавця...
+        </InformationCard>
+        <InformationCard icon="🕒" title="Баланс роботи та особистого життя">
+          Ми розуміємо важливість підтримки здорового балансу між роботою та
+          особистим життям. YourBank пропонує гнучкі умови роботи...
+        </InformationCard>
+      </section>
       <h2>
         <span className="highlight">Відкриті вакансії</span>
       </h2>

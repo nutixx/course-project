@@ -1,9 +1,9 @@
 .welcome-to-page {
-    background-image: url(../../assets/images/Abstract_Design_3.svg);
-    background-repeat: no-repeat;
-    background-position: right top;
+  background-image: url(../../assets/images/Abstract_Design_3.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
   width: fit-content;
-  margin: 0 auto;
+  margin-inline: auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -18,11 +18,14 @@
     max-width: 600px;
     overflow: hidden;
     border-radius: 16px;
+    padding: 0;
   }
 
   .image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     object-fit: cover;
   }
 
@@ -35,11 +38,17 @@
     box-shadow: 0 4px 8px #1c1c1c;
     max-width: 600px;
     transform: translateY(-2rem);
+
+    @media (max-width: 400px) {
+      padding: 0.5rem;
+    }
   }
 }
 
 @media (min-width: 940px) {
   .welcome-to-page {
+    min-height: 550px;
+    width: auto;
     padding: 2.5rem;
     flex-direction: row;
     justify-content: end; /* На комп'ютерах розташування зображення ліворуч */
@@ -47,6 +56,13 @@
     .welcome-image {
       flex: 1;
       max-width: 60%;
+      min-height: 550px;
+      
+    }
+
+    .image {
+      object-position: left;
+      min-height: 550px;
     }
 
     .welcome-content {
@@ -57,6 +73,7 @@
       flex: 2;
       text-align: left; /* Текст вирівняно вліво */
       margin-left: 1rem;
+      max-width: calc(12.5% + 400px);
     }
   }
 }

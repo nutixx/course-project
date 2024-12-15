@@ -1,4 +1,4 @@
-import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Careers from "./components/Careers/Careers";
@@ -10,7 +10,7 @@ import './App.css'
 function App() {
 
   return (
-    <HashRouter basename={import.meta.env.VITE_BASE_URL}>
+    <Router basename={import.meta.env.VITE_BASE_URL}>
       <Header />
       <main>
         <Routes>
@@ -21,7 +21,7 @@ function App() {
         </Routes>
       </main>
       <Footer/>
-    </HashRouter>
+    </Router>
   )
 }
 
