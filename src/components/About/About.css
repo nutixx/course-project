@@ -70,6 +70,9 @@
         padding-right: 2rem;
         border-right: 2px dotted var(--lime);
       }
+      .image-wrapper {
+        background-image: url(../../assets/images/Abstract_Design_3.svg);
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Modal from './Modal'; // Потрібно замінити на реальний імпорт Modal
+import Modal from './Modal';
 
 const JobApplicationModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
