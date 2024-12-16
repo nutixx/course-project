@@ -97,7 +97,6 @@
 }
 
 button.burger-menu {
-  display: hidden;
   width: 56px;
   height: 40px;
   background-color: var(--lime);

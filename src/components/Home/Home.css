@@ -497,22 +497,10 @@
 .CTA {
   position: relative;
   padding: 2rem;
-  /* background-image: url(../../assets/images/Abstract_Design_2.svg); */
-  /* background-size: 30px 30px; */
-  /* background-position: 0 0; */
-  /* background-repeat: no-repeat; */
   text-align: center;
   background-size: cover;
   border-radius: 20px;
   border: 1px solid #262626;
-
-  border-image-source: linear-gradient(0deg, #262626, #262626),
-    linear-gradient(
-      95.43deg,
-      rgba(202, 255, 51, 0.2) 0%,
-      rgba(202, 255, 51, 0) 5.36%
-    );
-
   .button {
     display: inline-block;
     margin-top: 2rem;
