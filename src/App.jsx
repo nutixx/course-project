@@ -11,7 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <Router basename={import.meta.env.VITE_BASE_URL}>
+    <Router basename={import.meta.env.VITE_BASE_URL || '/course-project'}>
       <ScrollToTop/>
       <Routes>
         {/* Маршрути з хедером і футером */}
