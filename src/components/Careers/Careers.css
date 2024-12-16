@@ -58,4 +58,10 @@
     color: var(--lime); /* Зелений маркер */
     font-size: 1.2rem;
   }
+
+  .yourbank-card {
+    .button {
+      border-radius: 16px;
+    }
+  }
 }

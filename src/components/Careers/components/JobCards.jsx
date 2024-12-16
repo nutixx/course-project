@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import jobCardsData from "../../../data/jobCardsData.json";
+import JobApplicationModal from "../../Modal/JobApplicationModal";
+
 
 const JobCards = () => {
   const [jobs, setJobs] = useState([]);
@@ -36,7 +38,7 @@ const JobCards = () => {
               ))}
             </ul>
           </div>
-          <button className="apply-button">Подати заявку</button>
+          <JobApplicationModal/>
         </div>
       ))}
     </section>

@@ -20,6 +20,7 @@
   }
 
   .faq-item {
+    text-align: left;
     border: 1px solid #262626;
     padding: 1.5rem;
     border-radius: 10px;
