@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import faqsData from "../../../data/faqsData.json";
+import faqsData from "../../data/faqsData.json";
+import "./FAQ.css";
 
 export default function FAQ() {
   const [visibleCount, setVisibleCount] = useState(4); // Початково відображати 4 питання

@@ -4,7 +4,7 @@ import Products from "./components/Products";
 import UseCases from "./components/UseCases/UseCases";
 import FeaturesTabs from "./components/Features/FeaturesTabs";
 import Testimonials from "./components/Testimonials";
-import FAQ from "./components/FAQ";
+import FAQ from "../FAQ/FAQ";
 import JoinUsModal from "../Modal/JoinUsModal";
 
 export default function Home() {

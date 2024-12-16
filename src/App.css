@@ -184,3 +184,13 @@ p.section-p {
     ); /* Три колонки на дуже великих екранах */
   }
 }
+
+.grid-4-items-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr; /* Дві колонки на великих екранах */
+  }
+}
