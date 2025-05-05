@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <header className={`header ${isMenuOpen && "bottom-radius-adaptive"}`}>
       <div className="logo">
-        <span className="logo-icon"></span> YourBanK
+        <span className="logo-icon"></span> YourOutsource
       </div>
       <nav className={`nav ${isMenuOpen ? "open" : ""}`} ref={navRef}>
         <ul>

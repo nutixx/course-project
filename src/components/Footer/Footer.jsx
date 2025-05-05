@@ -12,11 +12,11 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-top">
         <div className="logo">
-          <span className="logo-icon"></span> YourBanK
+          <span className="logo-icon"></span> YourOutsource
         </div>
         <nav className="footer-nav">
           <Link to='/'>Домівка</Link>
-          <Link to="/careers">Кар&apos;єра</Link>
+          <Link to="/careers">Кар'єра</Link>
           <Link to="/about">Про нас</Link>
           <Link to="/security">Безпека</Link>
         </nav>
@@ -45,7 +45,7 @@ export default function Footer() {
             <img src={linkedin} alt="" />
           </a>
         </div>
-        <p>YourBank All Rights Reserved</p>
+        <p>YourOutsource All Rights Reserved</p>
         <nav className="footer-links">
           <a href="#">Privacy Policy</a>
           <span>|</span>

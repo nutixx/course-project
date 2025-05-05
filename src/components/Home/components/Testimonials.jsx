@@ -34,10 +34,7 @@ export default function Testimonials() {
             Наші <span className="highlight">Відгуки</span>
           </h2>
           <p className="switch-wrapper__description">
-            Дізнайтеся, як YourBank змінив життя завдяки інноваційним цифровим
-            рішеннями та персоналізованим обслуговуванням клієнтів. Дізнайтеся,
-            чому наші клієнти довіряють нам нам для безпечної та процвітаючої
-            фінансової подорожі.
+            Дізнайтеся, як YourOutsource допомагає клієнтам досягати цілей завдяки сучасним аутсорсинговим рішенням, гнучким командам та інноваціям.
           </p>
         </div>
         <Tabs tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />

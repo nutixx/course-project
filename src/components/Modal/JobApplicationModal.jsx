@@ -14,9 +14,9 @@ const JobApplicationModal = () => {
       </button>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h2>Залишіть заявку на вакансію в <span className="highlight">YourBank</span></h2>
+        <h2>Залишіть заявку на вакансію в <span className="highlight">YourOutsource</span></h2>
         <p>
-          Заповніть форму, щоб стати частиною нашої команди та долучитись до створення інноваційного банківського майбутнього.
+          Заповніть форму, щоб стати частиною нашої команди та долучитись до створення інноваційних аутсорсингових рішень.
         </p>
         <form className="modal-form">
           <input

@@ -14,9 +14,9 @@ const JoinUsModal = () => {
       </button>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h2>Приєднуйтесь до команди <span className="highlight">YourBank!</span></h2>
+        <h2>Приєднуйтесь до команди <span className="highlight">YourOutsource!</span></h2>
         <p>
-          Заповніть форму, щоб стати частиною нашої місії формування майбутнього банківської галузі.
+          Заповніть форму, щоб стати частиною нашої місії формування майбутнього аутсорсингової індустрії.
         </p>
         <form className="modal-form">
           <input

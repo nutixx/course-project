@@ -22,7 +22,7 @@ export default function FAQ() {
         <span className="highlight">Поширені</span> Запитання
       </h2>
       <p className="faq-description section-p">
-        Залишилися питання? Зв&apos;яжіться з нашою командою через support@yourbank.com
+        Залишилися питання? Зв'яжіться з нашою командою через support@youroutsource.com
       </p>
       <div className="faq-list">
         {faqs.slice(0, visibleCount).map((faq, index) => (

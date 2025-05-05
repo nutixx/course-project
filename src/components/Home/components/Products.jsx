@@ -18,11 +18,10 @@ export default function Products() {
       <div className="products-header">
         <div>
           <h2 className="products-title">
-            Наші <span className="highlight">Продукти</span>
+            Наші <span className="highlight">Послуги</span>
           </h2>
           <p className="switch-wrapper__description">
-            Відкрийте для себе низку комплексних та індивідуальних банківських продуктів у
-            YourBank, розроблених відповідно до ваших унікальних фінансових потреб та прагнень.
+            Відкрийте для себе комплексні аутсорсингові рішення від YourOutsource, розроблені для оптимізації ваших бізнес-процесів, розвитку та масштабування.
           </p>
         </div>
         <Tabs tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />

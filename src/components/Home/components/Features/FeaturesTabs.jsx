@@ -3,7 +3,7 @@ import FeaturesList from "./FeaturesList";
 import featuresData from "../../../../data/featuresData.json"; // Імпортуємо JSON-файл
 
 export default function FeaturesTabs() {
-  const [activeTab, setActiveTab] = useState("online-banking");
+  const [activeTab, setActiveTab] = useState("project-management");
   const [tabs, setTabs] = useState([]);
   const [content, setContent] = useState({});
 
