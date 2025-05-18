@@ -1,0 +1,67 @@
+.values-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.value-item {
+  border-left: 3px solid var(--lime);
+  padding-left: 1.5rem;
+}
+
+.value-title {
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+  font-weight: 500;
+  color: #4c4c4d;
+}
+
+.value-description {
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .value-title {
+    font-size: 2.25rem;
+  }
+  .values-section {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .values-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.cards-section {
+  .job-requirements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .job-requirements li {
+    color: #b3b3b3;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .job-requirements li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--lime); /* Зелений маркер */
+    font-size: 1.2rem;
+  }
+
+  .yourbank-card {
+    .button {
+      border-radius: 16px;
+    }
+  }
+}
