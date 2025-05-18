@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
-import jobCardsData from "../../../data/jobCardsData.json";
+import { useQuery } from "@tanstack/react-query";
+import { fetchVacancies } from "../../../util/http";
 import JobApplicationModal from "../../Modal/JobApplicationModal";
 
 
 const JobCards = () => {
-  const [jobs, setJobs] = useState([]);
+  const { data: jobs = [], isLoading, error } = useQuery({
+    queryKey: ["vacancies"],
+    queryFn: () => fetchVacancies("vacancies"),
+  });
 
-  useEffect(() => {
-    setJobs(jobCardsData.jobs);
-  }, []);
+  if (isLoading) return <div>Завантаження вакансій...</div>;
+  if (error) return <div>Помилка при завантаженні вакансій</div>;
 
   return (
     <section className="cards-section">
