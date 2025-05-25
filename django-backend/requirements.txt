@@ -4,3 +4,4 @@ django-cors-headers
 gunicorn
 requests
 Pillow
+whitenoise  # Додано для обслуговування статичних файлів
