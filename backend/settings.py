@@ -3,7 +3,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'your-secret-key-here'  # Змініть на свій секретний ключ!
+SECRET_KEY = 'course123'
 
 DEBUG = True
 
