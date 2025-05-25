@@ -2,8 +2,7 @@ import { QueryClient } from '@tanstack/react-query';
 
 export const queryClient = new QueryClient();
 
-// const url = 'https://f5a0-91-243-22-229.ngrok-free.app';
-const url = 'http://localhost:8000';
+const url = import.meta.env.VITE_BACKEND_URL || 'https://course-project-5iwf.onrender.com';
 
 export async function fetchVacancies(endpoint) {
   const response = await fetch(`${url}/api/${endpoint}/`);
