@@ -79,12 +79,17 @@ const ContactModal = () => {
             onChange={(e) => setMessage(e.target.value)}
             required
           ></textarea>
-          <button type="submit" className="apply-button">
-            Надіслати заявку
+          <button 
+            type="submit" 
+            className="apply-button"
+            disabled={mutation.isPending}
+          >
+            {mutation.isPending ? "Відправляється..." : "Надіслати заявку"}
           </button>
           {status === "success" && (
             <p style={{ color: "green" }}>Заявку надіслано!</p>
           )}
+          {mutation.isPending && <p>Завантаження...</p>}
           {status === "error" && (
             <p style={{ color: "red" }}>
               Сталася помилка. Спробуйте ще раз.

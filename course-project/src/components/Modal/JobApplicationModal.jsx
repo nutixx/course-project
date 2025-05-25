@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { sendJobMutation } from "../../util/http";
-import Modal from './Modal';
+import Modal from "./Modal";
 
 const JobApplicationModal = ({ vacancyTitle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,7 +28,7 @@ const JobApplicationModal = ({ vacancyTitle }) => {
         email,
         message,
         file,
-        vacancyTitle, // додаємо назву вакансії
+        vacancyTitle,
       },
       {
         onSuccess: () => {
@@ -52,17 +52,25 @@ const JobApplicationModal = ({ vacancyTitle }) => {
       </button>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h2>Залишіть заявку на вакансію <span className="highlight">{vacancyTitle || "YourOutsource"}</span></h2>
+        <h2>
+          Залишіть заявку на вакансію{" "}
+          <span className="highlight">{vacancyTitle || "YourOutsource"}</span>
+        </h2>
         <p>
-          Заповніть форму, щоб стати частиною нашої команди та долучитись до створення інноваційних аутсорсингових рішень.
+          Заповніть форму, щоб стати частиною нашої команди та долучитись до
+          створення інноваційних аутсорсингових рішень.
         </p>
-        <form className="modal-form" onSubmit={handleSubmit} encType="multipart/form-data">
+        <form
+          className="modal-form"
+          onSubmit={handleSubmit}
+          encType="multipart/form-data"
+        >
           <input
             type="text"
             className="modal-input"
             placeholder="Ваше ім'я"
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <input
@@ -70,27 +78,36 @@ const JobApplicationModal = ({ vacancyTitle }) => {
             className="modal-input"
             placeholder="Ваша електронна адреса"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <textarea
             className="modal-textarea"
             placeholder="Чому ви хочете працювати у нас?"
             value={message}
-            onChange={e => setMessage(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
             required
           ></textarea>
           <input
             type="file"
             className="modal-input"
-            onChange={e => setFile(e.target.files[0])}
+            onChange={(e) => setFile(e.target.files[0])}
             accept=".pdf,.doc,.docx,.jpg,.png,.jpeg"
           />
-          <button type="submit" className="apply-button">
-            Надіслати заявку
+          <button
+            type="submit"
+            className="apply-button"
+            disabled={mutation.isPending}
+          >
+            {mutation.isPending ? "Відправляється..." : "Надіслати заявку"}
           </button>
-          {status === "success" && <p style={{color: 'green'}}>Заявку надіслано!</p>}
-          {status === "error" && <p style={{color: 'red'}}>Сталася помилка. Спробуйте ще раз.</p>}
+          {status === "success" && (
+            <p style={{ color: "green" }}>Заявку надіслано!</p>
+          )}
+          {mutation.isPending && <p>Завантаження...</p>}
+          {status === "error" && (
+            <p style={{ color: "red" }}>Сталася помилка. Спробуйте ще раз.</p>
+          )}
         </form>
       </Modal>
     </>
