@@ -1,21 +1,20 @@
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { sendJobMutation } from "../../util/http";
-import Modal from './Modal';
+import { sendContactMutation } from "../../util/http";
+import Modal from "./Modal";
 
-const JobApplicationModal = ({ vacancyTitle }) => {
+const ContactModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [file, setFile] = useState(null);
   const [status, setStatus] = useState(null);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   const mutation = useMutation({
-    mutationFn: sendJobMutation,
+    mutationFn: sendContactMutation,
   });
 
   const handleSubmit = (e) => {
@@ -23,12 +22,10 @@ const JobApplicationModal = ({ vacancyTitle }) => {
     setStatus(null);
     mutation.mutate(
       {
-        formType: "job",
+        formType: "contact",
         name,
         email,
         message,
-        file,
-        vacancyTitle, // додаємо назву вакансії
       },
       {
         onSuccess: () => {
@@ -36,7 +33,6 @@ const JobApplicationModal = ({ vacancyTitle }) => {
           setName("");
           setEmail("");
           setMessage("");
-          setFile(null);
         },
         onError: () => {
           setStatus("error");
@@ -48,21 +44,24 @@ const JobApplicationModal = ({ vacancyTitle }) => {
   return (
     <>
       <button className="button" onClick={openModal}>
-        Подати заявку
+        Замовити рішення
       </button>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h2>Залишіть заявку на вакансію <span className="highlight">{vacancyTitle || "YourOutsource"}</span></h2>
+        <h2>
+          Замовляйте рішення в{" "}
+          <span className="highlight">YourOutsource!</span>
+        </h2>
         <p>
-          Заповніть форму, щоб стати частиною нашої команди та долучитись до створення інноваційних аутсорсингових рішень.
+          Заповніть форму, щоб отримати безкоштовну консультацію та дізнатися найкраще рішення для вас!
         </p>
-        <form className="modal-form" onSubmit={handleSubmit} encType="multipart/form-data">
+        <form className="modal-form" onSubmit={handleSubmit}>
           <input
             type="text"
             className="modal-input"
             placeholder="Ваше ім'я"
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <input
@@ -70,31 +69,31 @@ const JobApplicationModal = ({ vacancyTitle }) => {
             className="modal-input"
             placeholder="Ваша електронна адреса"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <textarea
             className="modal-textarea"
-            placeholder="Чому ви хочете працювати у нас?"
+            placeholder="Чому ви хочете приєднатися?"
             value={message}
-            onChange={e => setMessage(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
             required
           ></textarea>
-          <input
-            type="file"
-            className="modal-input"
-            onChange={e => setFile(e.target.files[0])}
-            accept=".pdf,.doc,.docx,.jpg,.png,.jpeg"
-          />
           <button type="submit" className="apply-button">
             Надіслати заявку
           </button>
-          {status === "success" && <p style={{color: 'green'}}>Заявку надіслано!</p>}
-          {status === "error" && <p style={{color: 'red'}}>Сталася помилка. Спробуйте ще раз.</p>}
+          {status === "success" && (
+            <p style={{ color: "green" }}>Заявку надіслано!</p>
+          )}
+          {status === "error" && (
+            <p style={{ color: "red" }}>
+              Сталася помилка. Спробуйте ще раз.
+            </p>
+          )}
         </form>
       </Modal>
     </>
   );
 };
 
-export default JobApplicationModal;
+export default ContactModal;

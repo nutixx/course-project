@@ -2,8 +2,11 @@ import { QueryClient } from '@tanstack/react-query';
 
 export const queryClient = new QueryClient();
 
+const url = 'https://f5a0-91-243-22-229.ngrok-free.app';
+// const url = 'http://localhost:8000';
+
 export async function fetchVacancies(endpoint) {
-  const response = await fetch(`http://localhost:8000/api/${endpoint}/`);
+  const response = await fetch(`${url}/api/${endpoint}/`);
 
   if (!response.ok) {
     const error = new Error('An error occurred while fetching the data.');
@@ -13,4 +16,34 @@ export async function fetchVacancies(endpoint) {
   }
 
   return response.json();
+}
+
+export async function sendContactMutation(formData) {
+  const res = await fetch(`${url}/api/send-to-telegram/`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData),
+  });
+  if (!res.ok) throw new Error('Network error');
+  return res.json();
+}
+
+export async function sendJobMutation(formDataObj) {
+  const formData = new FormData();
+  formData.append('formType', formDataObj.formType);
+  formData.append('name', formDataObj.name);
+  formData.append('email', formDataObj.email);
+  formData.append('message', formDataObj.message);
+  if (formDataObj.vacancyTitle) {
+    formData.append('vacancyTitle', formDataObj.vacancyTitle);
+  }
+  if (formDataObj.file) {
+    formData.append('file', formDataObj.file);
+  }
+  const res = await fetch(`${url}/api/send-to-telegram/`, {
+    method: 'POST',
+    body: formData,
+  });
+  if (!res.ok) throw new Error('Network error');
+  return res.json();
 }

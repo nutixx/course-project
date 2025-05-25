@@ -10,7 +10,7 @@ const JobCards = () => {
   });
 
   if (isLoading) return <div>Завантаження вакансій...</div>;
-  if (error) return <div>Помилка при завантаженні вакансій</div>;
+  if (error) return <div>Помилка завантаження вакансій: {error.message} </div>;
 
   return (
     <section className="cards-section">
@@ -40,7 +40,7 @@ const JobCards = () => {
               ))}
             </ul>
           </div>
-          <JobApplicationModal/>
+          <JobApplicationModal vacancyTitle={job.title}/>
         </div>
       ))}
     </section>

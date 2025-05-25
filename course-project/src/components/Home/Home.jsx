@@ -5,7 +5,7 @@ import UseCases from "./components/UseCases/UseCases";
 import FeaturesTabs from "./components/Features/FeaturesTabs";
 import Testimonials from "./components/Testimonials";
 import FAQ from "../FAQ/FAQ";
-import JoinUsModal from "../Modal/JoinUsModal";
+import ContactModal from "../Modal/ContactModal";
 
 export default function Home() {
   const individualData = {
@@ -60,7 +60,7 @@ export default function Home() {
             надавати персоналізовані та інноваційні послуги, що відповідають
             потребам наших клієнтів.
           </p>
-          <JoinUsModal />
+          <ContactModal />
         </div>
         <div className="hero-image"></div>
       </section>
@@ -105,7 +105,7 @@ export default function Home() {
           підтримка — усе це чекає на вас з YourOutsource. Не відкладай, зроби
           перший крок до успіху!
         </p>
-        <JoinUsModal />
+        <ContactModal />
       </section>
     </>
   );
