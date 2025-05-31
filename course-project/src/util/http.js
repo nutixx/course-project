@@ -2,10 +2,15 @@ import { QueryClient } from '@tanstack/react-query';
 
 export const queryClient = new QueryClient();
 
-const url = import.meta.env.VITE_BACKEND_URL || 'https://course-project-5iwf.onrender.com';
+const url = import.meta.env.VITE_BACKEND_URL || '';
 
 export async function fetchVacancies(endpoint) {
-  const response = await fetch(`${url}/api/${endpoint}/`);
+  const response = await fetch(`${url}/api/${endpoint}/`, {
+    headers: {
+      // 'Content-Type': 'application/json',
+      'ngrok-skip-browser-warning': 'true',
+    }
+  });
 
   if (!response.ok) {
     const error = new Error('An error occurred while fetching the data.');
