@@ -74,7 +74,7 @@ const ContactModal = () => {
           />
           <textarea
             className="modal-textarea"
-            placeholder="Чому ви хочете приєднатися?"
+            placeholder="Який ваш запит?"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
